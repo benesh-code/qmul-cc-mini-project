@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form method="POST">
+  <h3 align="center">Login to our Cloud Notes</h3>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
+{% endblock %}
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TaxCatchAll msdt:dt="string">1;#Protect</mso:TaxCatchAll>
+<mso:QMULInformationClassificationTaxHTField0 msdt:dt="string">Protect|9124d8d9-0c1c-41e9-aa14-aba001e9a028</mso:QMULInformationClassificationTaxHTField0>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

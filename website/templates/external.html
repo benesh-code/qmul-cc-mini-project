@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block title %}External{% endblock %} {% block content
+%}
+<style>
+    #calendar {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #calendre td, #calendar th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #calendar tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #calendar tr:hover {background-color: #ddd;}
+    
+    #calendar th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #853414;
+      color: white;
+    }
+    </style>
+<table>
+    <table>
+    
+        <tr>
+            <th>name</th>
+            <th>name_local</th>
+            <th>language</th>
+            <th>description</th>
+            <th>country</th>
+            <th>location</th>
+            <th>type</th>
+            <th>date</th>
+            <th>date_year</th>
+            <th>date_month</th>
+            <th>date_day</th>
+            <th>week_day</th>
+        </tr> 
+        {%for row in data %}
+        <tr>
+        <td>{{row.name}}</td>
+        <td>{{row.name_local}}</td>
+        <td>{{row.language}}</td>
+        <td>{{row.description}}</td>
+        <td>{{row.country}}</td>
+        <td>{{row.location}}</td>    
+        <td>{{row.type}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.date_year}}</td>
+        <td>{{row.date_month}}</td>
+        <td>{{row.date_day}}</td>
+        <td>{{row.week_day}}</td>        
+        </tr>
+        {%endfor %}
+</table>
+			
+{% endblock %}
+
+
+
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TaxCatchAll msdt:dt="string">1;#Protect</mso:TaxCatchAll>
+<mso:QMULInformationClassificationTaxHTField0 msdt:dt="string">Protect|9124d8d9-0c1c-41e9-aa14-aba001e9a028</mso:QMULInformationClassificationTaxHTField0>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

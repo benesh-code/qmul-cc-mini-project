@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<script>
+function editNote(noteId){
+  data = document.getElementById('update'+String(noteId)).value
+  fetch("/update-note", {
+      method: "PUT",
+      body: JSON.stringify({ noteId: noteId , data: data }),
+    }).then((_res) => {
+      window.location.href = "/";
+    });
+  } 
+  
+
+</script>
+<h1 align="center">TO DO LIST</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <div >
+  <li class="nav-item">
+    <textarea placeholder="type your do list " class="form-control" id="update{{note.id}}" onchange="editNote({{ note.id }})">{{ note.data }}</textarea>
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+</div>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea  name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center" class="wrapper">
+    <button   type="submit" class="btn btn-success" id="add">Add Note</button>
+    <a href="/external" class="button" id="search">Search Calendar</a>
+  </div>
+</form>
+
+{% endblock %}
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TaxCatchAll msdt:dt="string">1;#Protect</mso:TaxCatchAll>
+<mso:QMULInformationClassificationTaxHTField0 msdt:dt="string">Protect|9124d8d9-0c1c-41e9-aa14-aba001e9a028</mso:QMULInformationClassificationTaxHTField0>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
