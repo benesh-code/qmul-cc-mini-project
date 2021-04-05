@@ -63,6 +63,7 @@ To use this template, your computer needs:
 ## Running The App
 
 - Deploy using Heroku Git
+ --https://devcenter.heroku.com/articles/heroku-cli
 - Install the Heroku CLI
 - Download and install the Heroku CLI.
 
@@ -80,10 +81,11 @@ Make some changes to the code you just cloned and deploy them to Heroku using Gi
 - $ git add .
 - $ git commit -am "make it better"
 - $ git push heroku master
-```
-```bash
-python main.py
-```
+
+In-order to create database in cloud follow this link:Database-postgressql-https://devcenter.heroku.com/categories/data-management
+- Visualize your data with Dashboards, reports, complex SQL queries with simple UI using -https://devcenter.heroku.com/articles/draxlr
+
+
 
 ## Viewing The App
 
