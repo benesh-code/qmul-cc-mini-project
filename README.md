@@ -11,6 +11,8 @@
 # Flask Web App Tutorial
 This is a " To do List " application with authentication and CRUD functionality using the Python Flask micro-framework.
 
+-You can take note of your daily routines update and delete your notes through this application
+
 ## Contents
  - [Third-Party Extensions]
  - [Setup & Installtion]
@@ -41,10 +43,19 @@ This is a " To do List " application with authentication and CRUD functionality 
    - heroku pg:psql postgresql-silhouetted-15724 --app cc-mini-proj
 ## Setup & Installtion
 
+To use this template, your computer needs:
+
+- [Python 3](https://python.org)
+- [Pip Package Manager](https://pypi.python.org/pypi)
+
 Make sure you have the latest version of Python installed.
 
-```bash
-git clone <repo-url>
+The website folder holds the skeleton of the project which inclues template and static folder along with .py files 
+
+```
+run main.py file using the below command
+
+python3 main.py
 ```
 
 Heroku's dynos are just managed runtime containers with a Linux operating system underneath. These containers run the processes that allow your custom application code to run.
@@ -55,10 +66,7 @@ web gunicorn wsgi:app --preload --workers 1
 ```bash
 pip install -r requirements.txt
 ```
-To use this template, your computer needs:
 
-- [Python 3](https://python.org)
-- [Pip Package Manager](https://pypi.python.org/pypi)
 
 ## Running The App
 
